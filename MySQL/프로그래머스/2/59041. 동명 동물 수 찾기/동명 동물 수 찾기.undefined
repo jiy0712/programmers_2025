@@ -1,0 +1,6 @@
+select NAME, count(*) as COUNT
+from ANIMAL_INS
+where NAME is not null -- 이름이 null 아닌 것만
+group by NAME -- 이름별 그룹화
+having count >= 2 -- 2번이상 등장한 그룹만
+order by NAME
